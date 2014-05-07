@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#ifndef __IPHONE_5_0
-#error YYKit only support iOS 5.0 and later
+#ifndef __IPHONE_6_0
+#error LSExtensionKit only support iOS 6.0 and later
 #endif
 
 #import <UIColor/UIColor+Extension.h>
