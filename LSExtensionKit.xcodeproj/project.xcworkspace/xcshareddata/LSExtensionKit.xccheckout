@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2CF1A49A-A4D0-4C37-A197-507488FB0C72</string>
+	<string>F4FBE74F-7060-498F-B0E6-72403AE1BFFD</string>
 	<key>IDESourceControlProjectName</key>
 	<string>LSExtensionKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0137F74F-7203-449D-A4A4-F975F70D66A3</key>
-		<string>https://bitbucket.org/zq282502532/documents.git</string>
+		<key>3F811F16-63DE-446C-8643-6AE232398C56</key>
+		<string>https://github.com/HistoryZhang/LSExtension.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>LSExtensionKit/LSExtensionKit.xcodeproj/project.xcworkspace</string>
+	<string>LSExtensionKit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0137F74F-7203-449D-A4A4-F975F70D66A3</key>
-		<string>../../..</string>
+		<key>3F811F16-63DE-446C-8643-6AE232398C56</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/zq282502532/documents.git</string>
+	<string>https://github.com/HistoryZhang/LSExtension.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0137F74F-7203-449D-A4A4-F975F70D66A3</string>
+	<string>3F811F16-63DE-446C-8643-6AE232398C56</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0137F74F-7203-449D-A4A4-F975F70D66A3</string>
+			<string>3F811F16-63DE-446C-8643-6AE232398C56</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Documents</string>
+			<string>LSExtension</string>
 		</dict>
 	</array>
 </dict>
