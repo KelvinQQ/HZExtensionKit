@@ -26,6 +26,7 @@
 @property (nonatomic, assign) CGPoint origin;
 
 - (UIViewController *)viewController;
+- (UIView *)appTopView;
 
 - (UIImage *)capture;
 - (UIImage *)captureWithRect:(CGRect)rect;
