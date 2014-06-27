@@ -159,6 +159,14 @@ static const int kMonthDays[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
     return string;
 }
 
++ (NSDate *)dateWithString:(NSString *)string byFormat:(NSString *)format
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = format;
+    NSDate *date = [formatter dateFromString:string];
+    return date;
+}
+
 - (NSString *)chineseCalendar
 {
     NSArray *chineseMonths = @[@"正月", @"二月", @"三月", @"四月",

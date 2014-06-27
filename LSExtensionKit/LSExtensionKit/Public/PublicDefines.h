@@ -49,6 +49,26 @@
 #define RADIANS_TO_DEGREES(r) ((d) * 180.0f / M_PI)
 #endif
 
+#ifndef kAppDelegate
+#define kAppDelegate            ([UIApplication sharedApplication].delegate)
+#endif
+
+#ifndef kDeviceVersion
+#define kDeviceVersion          [[[UIDevice currentDevice] systemVersion] floatValue]
+#endif
+
+#ifndef GBKEncoding
+#define GBKEncoding                     CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
+#endif
+
+#ifndef InitVc
+#define InitVc(sbName, vcIdf)   [[UIStoryboard storyboardWithName:sbName bundle:nil] instantiateViewControllerWithIdentifier:vcIdf];
+#endif
+
+#ifndef LoadNib
+#define LoadNib(nibName)    [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
+#endif
+
 #ifndef NSRangeMake
 static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length) {
     NSRange r;

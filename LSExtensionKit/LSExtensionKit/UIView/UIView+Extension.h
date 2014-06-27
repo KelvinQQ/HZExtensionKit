@@ -12,8 +12,8 @@
 
 @property (nonatomic, assign) CGFloat left;
 @property (nonatomic, assign) CGFloat top;
-@property (nonatomic, assign, readonly) CGFloat right;
-@property (nonatomic, assign, readonly) CGFloat bottom;
+@property (nonatomic, assign) CGFloat right;
+@property (nonatomic, assign) CGFloat bottom;
 
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGFloat width;
@@ -26,7 +26,7 @@
 @property (nonatomic, assign) CGPoint origin;
 
 - (UIViewController *)viewController;
-- (UIView *)appTopView;
++ (UIView *)appTopView;
 
 - (UIImage *)capture;
 - (UIImage *)captureWithRect:(CGRect)rect;

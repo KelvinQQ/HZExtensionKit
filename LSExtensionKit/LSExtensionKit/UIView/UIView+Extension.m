@@ -21,7 +21,7 @@
     return nil;
 }
 
-- (UIView *)appTopView
++ (UIView *)appTopView
 {
     UIViewController *appRootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
     UIViewController *topVC = appRootVC;
@@ -57,10 +57,26 @@
 {
     return CGRectGetMaxX(self.frame);
 }
+
+- (void)setRight:(CGFloat)right
+{
+    CGRect frame = self.frame;
+    CGFloat offset = self.right - right;
+    frame.origin.x += offset;
+    self.frame = frame;
+}
 - (CGFloat)bottom
 {
     return CGRectGetMaxY(self.frame);
 }
+- (void)setBottom:(CGFloat)bottom
+{
+    CGRect frame = self.frame;
+    CGFloat offset = self.bottom - bottom;
+    frame.origin.y += offset;
+    self.frame = frame;
+}
+
 - (CGFloat)width
 {
     return CGRectGetWidth(self.frame);

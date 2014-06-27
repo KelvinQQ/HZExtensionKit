@@ -29,4 +29,5 @@
 - (NSString *)chineseDate;
 - (BOOL)isSameDay:(NSDate *)date;
 - (BOOL)isSameMonth:(NSDate *)date;
++ (NSDate *)dateWithString:(NSString *)string byFormat:(NSString *)format;
 @end

@@ -50,7 +50,7 @@
 {
     BOOL success = NO;
     if (![NSFileManager isFileExists:from]) {
-//        LSLog(@"fileCopy Error : from file is error");
+        LSLog(@"fileCopy Error : from file is error");
         success = NO;
     }
     else {
@@ -58,7 +58,7 @@
         NSError *error;
         success = [filemanager copyItemAtPath:from toPath:to error:&error];
         if (!success) {
-//            LSLog(@"fileCopy Error : %@", [error localizedDescription]);
+            LSLog(@"fileCopy Error : %@", [error localizedDescription]);
         }
     }
 	return success;
