@@ -17,7 +17,9 @@ void HZLog(NSString *log, ...)
     va_start(args, log);
     NSString *str = [[NSString alloc] initWithFormat:log arguments:args];
     va_end(args);
+    NSLog(@"<<===================\n\n\n");
     NSLog(@"%@", str);
+    NSLog(@"\n\n\n===================>>");
 #ifdef WriteToLogFile
     NSString *withDateStr = [NSString stringWithFormat:@"日期:%@,文件名:%s, line:%d, function:%s, 日志内容:%@\n",[NSDate date],__FILE__,__LINE__,__PRETTY_FUNCTION__,str ];
     
