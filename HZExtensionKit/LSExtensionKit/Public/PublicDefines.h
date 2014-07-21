@@ -26,8 +26,9 @@
 #define HZ_RETAIN(__pointer)            __pointer
 #endif
 
-#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-#define kDeviceVersion          [[[UIDevice currentDevice] systemVersion] floatValue]
+#ifndef HZIsIPhone5
+#define HZIsIPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#endif
 
 #ifndef NSStringFromInt
 #define NSStringFromInt(intValue)           [NSString stringWithFormat:@"%i", intValue]
@@ -41,36 +42,37 @@
 #define NSStringFromUTF8String(CString)     [NSString stringWithUTF8String:CString]
 #endif
 
-#ifndef DEGREES_TO_RADIANS
-#define DEGREES_TO_RADIANS(d) ((d) * M_PI / 180.0f)
+#ifndef DegreesToRadians
+#define DegreesToRadians(d) ((d) * M_PI / 180.0f)
 #endif
 
-#ifndef RADIANS_TO_DEGREES
-#define RADIANS_TO_DEGREES(r) ((d) * 180.0f / M_PI)
+#ifndef RadiansToDegrees
+#define RadiansToDegrees(r) ((d) * 180.0f / M_PI)
 #endif
 
-#ifndef kAppDelegate
-#define kAppDelegate            ([UIApplication sharedApplication].delegate)
+#ifndef HZAppDelegate
+#define HZAppDelegate            ([UIApplication sharedApplication].delegate)
 #endif
 
-#ifndef kDeviceVersion
-#define kDeviceVersion          [[[UIDevice currentDevice] systemVersion] floatValue]
+#ifndef HZDeviceVersion
+#define HZDeviceVersion          [[[UIDevice currentDevice] systemVersion] floatValue]
 #endif
 
-#ifndef GBKEncoding
-#define GBKEncoding                     CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
+#ifndef HZGBKEncoding
+#define HZGBKEncoding                     CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
 #endif
 
-#ifndef InitVc
-#define InitVc(sbName, vcIdf)   [[UIStoryboard storyboardWithName:sbName bundle:nil] instantiateViewControllerWithIdentifier:vcIdf];
+#ifndef HZInitVc
+#define HZInitVc(sbName, vcIdf)   [[UIStoryboard storyboardWithName:sbName bundle:nil] instantiateViewControllerWithIdentifier:vcIdf];
 #endif
 
-#ifndef LoadNib
-#define LoadNib(nibName)    [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
+#ifndef HZLoadNib
+#define HZLoadNib(nibName)    [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
 #endif
 
 #ifndef NSRangeMake
-static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length) {
+static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length)
+{
     NSRange r;
     r.location = location;
     r.length = length;

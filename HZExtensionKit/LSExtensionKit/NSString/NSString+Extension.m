@@ -14,7 +14,6 @@
     CFUUIDRef uuidObj    = CFUUIDCreate(nil);
     NSString *uuidString = (NSString *)CFBridgingRelease(CFUUIDCreateString(nil, uuidObj));
     CFRelease(uuidObj);
-//    uuidString = [uuidString stringByReplacingOccurrencesOfString:@"-" withString:@""];
     return uuidString;
 }
 @end

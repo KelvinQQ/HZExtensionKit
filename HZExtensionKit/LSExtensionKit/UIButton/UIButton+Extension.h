@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UIButton (Extension)
-- (void)setTitle:(NSString *)title normalBgImage:(NSString *)normal highlighteJHgImage:(NSString *)highlighted;
-- (void)setNormalBgImage:(NSString *)normal highlighteJHgImage:(NSString *)highlighted;
+- (void)setTitle:(NSString *)title normalBgImage:(NSString *)normal highlightedBgImage:(NSString *)highlighted;
+- (void)setNormalBgImage:(NSString *)normal highlightedBgImage:(NSString *)highlighted;
 - (void)setNormalTitle:(NSString *)normal highlightedTitle:(NSString *)highlighted;
-- (void)setTitle:(NSString *)normal;
-- (NSString *)title;
+- (void)setNormalTitle:(NSString *)normal;
+- (NSString *)normalTitle;
 @end
