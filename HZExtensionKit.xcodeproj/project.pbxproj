@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		035C67D1197CF82600BC7FDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035C67D0197CF82600BC7FDA /* Foundation.framework */; };
-		035C67D6197CF82600BC7FDA /* HZExtensionKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 035C67D5197CF82600BC7FDA /* HZExtensionKit.h */; };
-		035C67D8197CF82600BC7FDA /* HZExtensionKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 035C67D7197CF82600BC7FDA /* HZExtensionKit.m */; };
 		035C67DF197CF82600BC7FDA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035C67DE197CF82600BC7FDA /* XCTest.framework */; };
 		035C67E0197CF82600BC7FDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035C67D0197CF82600BC7FDA /* Foundation.framework */; };
 		035C67E2197CF82600BC7FDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 035C67E1197CF82600BC7FDA /* UIKit.framework */; };
@@ -45,7 +43,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				035C67D6197CF82600BC7FDA /* HZExtensionKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,8 +52,6 @@
 		035C67CD197CF82600BC7FDA /* libHZExtensionKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHZExtensionKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		035C67D0197CF82600BC7FDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		035C67D4197CF82600BC7FDA /* HZExtensionKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HZExtensionKit-Prefix.pch"; sourceTree = "<group>"; };
-		035C67D5197CF82600BC7FDA /* HZExtensionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZExtensionKit.h; sourceTree = "<group>"; };
-		035C67D7197CF82600BC7FDA /* HZExtensionKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZExtensionKit.m; sourceTree = "<group>"; };
 		035C67DD197CF82600BC7FDA /* HZExtensionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZExtensionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		035C67DE197CF82600BC7FDA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		035C67E1197CF82600BC7FDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -142,8 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				035C67F6197CF83600BC7FDA /* HZExtensionKit */,
-				035C67D5197CF82600BC7FDA /* HZExtensionKit.h */,
-				035C67D7197CF82600BC7FDA /* HZExtensionKit.m */,
 				035C67D3197CF82600BC7FDA /* Supporting Files */,
 			);
 			path = HZExtensionKit;
@@ -365,7 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035C67D8197CF82600BC7FDA /* HZExtensionKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

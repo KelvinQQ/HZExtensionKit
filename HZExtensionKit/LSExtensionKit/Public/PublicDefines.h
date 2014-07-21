@@ -51,23 +51,23 @@
 #endif
 
 #ifndef HZAppDelegate
-#define HZAppDelegate            ([UIApplication sharedApplication].delegate)
+#define HZAppDelegate           ([UIApplication sharedApplication].delegate)
 #endif
 
 #ifndef HZDeviceVersion
-#define HZDeviceVersion          [[[UIDevice currentDevice] systemVersion] floatValue]
+#define HZDeviceVersion         [[[UIDevice currentDevice] systemVersion] floatValue]
 #endif
 
 #ifndef HZGBKEncoding
-#define HZGBKEncoding                     CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
+#define HZGBKEncoding           CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)
 #endif
 
 #ifndef HZInitVc
-#define HZInitVc(sbName, vcIdf)   [[UIStoryboard storyboardWithName:sbName bundle:nil] instantiateViewControllerWithIdentifier:vcIdf];
+#define HZInitVc(sbName, vcIdf) [[UIStoryboard storyboardWithName:sbName bundle:nil] instantiateViewControllerWithIdentifier:vcIdf];
 #endif
 
 #ifndef HZLoadNib
-#define HZLoadNib(nibName)    [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
+#define HZLoadNib(nibName)      [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
 #endif
 
 #ifndef NSRangeMake
