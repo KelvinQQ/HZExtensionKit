@@ -141,7 +141,7 @@
 		035C67D2197CF82600BC7FDA /* HZExtensionKit */ = {
 			isa = PBXGroup;
 			children = (
-				035C67F6197CF83600BC7FDA /* LSExtensionKit */,
+				035C67F6197CF83600BC7FDA /* HZExtensionKit */,
 				035C67D5197CF82600BC7FDA /* HZExtensionKit.h */,
 				035C67D7197CF82600BC7FDA /* HZExtensionKit.m */,
 				035C67D3197CF82600BC7FDA /* Supporting Files */,
@@ -175,7 +175,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		035C67F6197CF83600BC7FDA /* LSExtensionKit */ = {
+		035C67F6197CF83600BC7FDA /* HZExtensionKit */ = {
 			isa = PBXGroup;
 			children = (
 				035C67F7197CF83600BC7FDA /* HZExtensionKit.h */,
@@ -190,6 +190,7 @@
 				035C6810197CF83600BC7FDA /* UIImage */,
 				035C6813197CF83600BC7FDA /* UIView */,
 			);
+			name = HZExtensionKit;
 			path = LSExtensionKit;
 			sourceTree = "<group>";
 		};
@@ -555,6 +556,7 @@
 				035C67F2197CF82600BC7FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		035C67F3197CF82600BC7FDA /* Build configuration list for PBXNativeTarget "HZExtensionKitTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +565,7 @@
 				035C67F5197CF82600BC7FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
