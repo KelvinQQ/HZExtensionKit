@@ -42,7 +42,6 @@
 	NSError *error;
 	BOOL success = [filemanager removeItemAtPath:path error:&error];
 	if (!success) {
-//        HZLog(@"fileDelete Error : %@", [error localizedDescription]);
 	}
 	return success;
 }
@@ -50,7 +49,6 @@
 {
     BOOL success = NO;
     if (![NSFileManager isFileExists:from]) {
-        HZLog(@"fileCopy Error : from file is error");
         success = NO;
     }
     else {
@@ -58,7 +56,6 @@
         NSError *error;
         success = [filemanager copyItemAtPath:from toPath:to error:&error];
         if (!success) {
-            HZLog(@"fileCopy Error : %@", [error localizedDescription]);
         }
     }
 	return success;
