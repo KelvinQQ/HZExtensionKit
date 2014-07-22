@@ -47,11 +47,11 @@
 #endif
 
 #ifndef RadiansToDegrees
-#define RadiansToDegrees(r) ((d) * 180.0f / M_PI)
+#define RadiansToDegrees(r) ((r) * 180.0f / M_PI)
 #endif
 
-#ifndef HZAppDelegate
-#define HZAppDelegate           ([UIApplication sharedApplication].delegate)
+#ifndef HZApplicationDelegate
+#define HZApplicationDelegate   ([UIApplication sharedApplication].delegate)
 #endif
 
 #ifndef HZDeviceVersion
