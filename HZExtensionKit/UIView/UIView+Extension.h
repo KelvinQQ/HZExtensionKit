@@ -30,4 +30,6 @@
 
 - (UIImage *)capture;
 - (UIImage *)captureWithRect:(CGRect)rect;
+
+- (void)removeAllSubViews;
 @end

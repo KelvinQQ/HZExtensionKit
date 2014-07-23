@@ -170,4 +170,10 @@
     UIGraphicsEndImageContext();
     return  theImage;
 }
+
+#pragma mark -
+- (void)removeAllSubViews
+{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
 @end
