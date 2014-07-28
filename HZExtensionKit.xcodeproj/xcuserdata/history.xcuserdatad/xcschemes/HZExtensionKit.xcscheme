@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "035C67CC197CF82600BC7FDA"
+               BlueprintIdentifier = "032B4D1E198657B100761FE1"
                BuildableName = "libHZExtensionKit.a"
                BlueprintName = "HZExtensionKit"
                ReferencedContainer = "container:HZExtensionKit.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "035C67DC197CF82600BC7FDA"
+               BlueprintIdentifier = "032B4D2E198657B100761FE1"
                BuildableName = "HZExtensionKitTests.xctest"
                BlueprintName = "HZExtensionKitTests"
                ReferencedContainer = "container:HZExtensionKit.xcodeproj">

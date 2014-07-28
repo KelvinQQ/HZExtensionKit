@@ -206,4 +206,12 @@ static const int kMonthDays[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
     NSArray *md = [chineseCalendar componentsSeparatedByString:@"|"];
     return [NSString stringWithFormat:@"%@%@", [md firstObject], [md lastObject]];
 }
+
+- (NSDateComponents *)intervalDateComponentsWithDate:(NSDate *)date
+{
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    unsigned int unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    NSDateComponents *comps = [gregorian components:unitFlags fromDate:date  toDate:self  options:0];
+    return comps;
+}
 @end
