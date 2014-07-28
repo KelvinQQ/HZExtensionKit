@@ -1,4 +1,4 @@
-LSExtension
+HZExtension
 ===========
 
 Category For `UIColor`, `UIButton`, `UIAlertView`, `UIView`, `NSDate`, `NSFileManager`, `NSDictionary`, `NSString`, `UIImage`.
