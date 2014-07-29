@@ -30,4 +30,5 @@
 - (BOOL)isSameDay:(NSDate *)date;
 - (BOOL)isSameMonth:(NSDate *)date;
 + (NSDate *)dateWithString:(NSString *)string byFormat:(NSString *)format;
+- (NSDateComponents *)intervalDateComponentsWithDate:(NSDate *)date;
 @end

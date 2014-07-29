@@ -211,6 +211,7 @@ static const int kMonthDays[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     unsigned int unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    date = [date dateByAddingTimeInterval:1];
     NSDateComponents *comps = [gregorian components:unitFlags fromDate:date  toDate:self  options:0];
     return comps;
 }

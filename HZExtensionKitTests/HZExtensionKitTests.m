@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "HZExtensionKit.h"
 
 @interface HZExtensionKitTests : XCTestCase
 
@@ -26,9 +27,14 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testIntervalDateComponentsWithDate
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSDate *date = [[NSDate date] dateByAddingDays:1];
+    NSDateComponents *components = [[NSDate date] intervalDateComponentsWithDate:date];
+    NSInteger day = components.day;
+    XCTAssertEqual(day, -1, @"Is Not True");
 }
+
+
 
 @end
