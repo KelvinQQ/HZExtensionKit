@@ -47,6 +47,7 @@
     
     CGPoint pt = CGPointMake(111, 222);
     HZLogCGPoint(pt);
+
 }
 
 

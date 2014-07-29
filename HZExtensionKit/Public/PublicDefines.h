@@ -30,24 +30,32 @@
 #define HZIsIPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
 #endif
 
-#ifndef NSStringFromInt
-#define NSStringFromInt(intValue)           [NSString stringWithFormat:@"%i", intValue]
+#ifndef HZIsIPad
+#define HZIsIPad    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #endif
 
-#ifndef NSStringFromFloat
-#define NSStringFromFloat(floatValue)       [NSString stringWithFormat:@"%f", floatValue]
+#ifndef HZIsRetina
+#define HZIsRetina ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 #endif
 
-#ifndef NSStringFromUTF8String
-#define NSStringFromUTF8String(CString)     [NSString stringWithUTF8String:CString]
+#ifndef HZStringFromInt
+#define HZStringFromInt(intValue)           [NSString stringWithFormat:@"%i", intValue]
 #endif
 
-#ifndef DegreesToRadians
-#define DegreesToRadians(d) ((d) * M_PI / 180.0f)
+#ifndef HZStringFromFloat
+#define HZStringFromFloat(floatValue)       [NSString stringWithFormat:@"%f", floatValue]
 #endif
 
-#ifndef RadiansToDegrees
-#define RadiansToDegrees(r) ((r) * 180.0f / M_PI)
+#ifndef HZStringFromUTF8String
+#define HZStringFromUTF8String(CString)     [NSString stringWithUTF8String:CString]
+#endif
+
+#ifndef HZDegreesToRadians
+#define HZDegreesToRadians(d) ((d) * M_PI / 180.0f)
+#endif
+
+#ifndef HZRadiansToDegrees
+#define HZRadiansToDegrees(r) ((r) * 180.0f / M_PI)
 #endif
 
 #ifndef HZApplicationDelegate
@@ -70,6 +78,10 @@
 #define HZLoadNib(nibName)      [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
 #endif
 
+#ifdef HZClearColor
+#define HZClearColor            [UIColor clearColor]
+#endif
+
 #ifndef NSRangeMake
 static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length)
 {
@@ -83,19 +95,19 @@ static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length)
 
 #ifndef HZLog
 
-//#define WriteToLogFile
+#define WriteToLogFile
 
 #ifdef DEBUG
 
 #ifdef WriteToLogFile
 #define HZLog(fmt, ...) \
-   NSLog(@"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [LOG START %s : %d]\n" fmt @"\n[LOG END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n", __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__); \
+    NSLog(@"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [LOG START %s : %d]\n" fmt @"\n[LOG END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n", __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__); \
     { \
         NSString *format = [NSString stringWithFormat:@"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [LOG START %s : %d]\n" fmt @"\n[LOG END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n", __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]; \
         NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"log.txt"]; \
         if (![[NSFileManager defaultManager] fileExistsAtPath:path]) { \
-        fprintf(stderr,"Creating file at %s",[path UTF8String]); \
-        [[NSData data] writeToFile:path atomically:YES]; \
+            fprintf(stderr,"Creating file at %s",[path UTF8String]); \
+            [[NSData data] writeToFile:path atomically:YES]; \
         } \
         NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:path]; \
         [handle truncateFileAtOffset:[handle seekToEndOfFile]]; \
@@ -110,7 +122,7 @@ static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length)
 #else
 
 #define HZLog(fmt, ...) \
-    do{}while(0)
+    do{}while(0);
 #endif
 
 #define HZLogCGRect(rc)     HZLog(@"CGRect : (%f, %f) - (%f, %f)", rc.origin.x, rc.origin.y, rc.size.width, rc.size.height)
