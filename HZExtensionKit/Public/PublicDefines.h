@@ -80,9 +80,43 @@ static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length)
 }
 #endif
 
-void HZLog(NSString *log, ...);
-void HZLogCGRect(CGRect rc);
-void HZLogCGPoint(CGPoint pt);
-void HZLogCGSize(CGSize sz);
+
+#ifndef HZLog
+
+//#define WriteToLogFile
+
+#ifdef DEBUG
+
+#ifdef WriteToLogFile
+#define HZLog(fmt, ...) \
+   NSLog(@"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [LOG START %s : %d]\n" fmt @"\n[LOG END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n", __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__); \
+    { \
+        NSString *format = [NSString stringWithFormat:@"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [LOG START %s : %d]\n" fmt @"\n[LOG END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n", __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__]; \
+        NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"log.txt"]; \
+        if (![[NSFileManager defaultManager] fileExistsAtPath:path]) { \
+        fprintf(stderr,"Creating file at %s",[path UTF8String]); \
+        [[NSData data] writeToFile:path atomically:YES]; \
+        } \
+        NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:path]; \
+        [handle truncateFileAtOffset:[handle seekToEndOfFile]]; \
+        [handle writeData:[format dataUsingEncoding:NSUTF8StringEncoding]]; \
+        [handle closeFile]; \
+    }
+#else
+#define HZLog(fmt, ...) \
+    NSLog(@"\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< [LOG START %s : %d]\n" fmt @"\n[LOG END] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n", __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#endif
+
+#else
+
+#define HZLog(fmt, ...) \
+    do{}while(0)
+#endif
+
+#define HZLogCGRect(rc)     HZLog(@"CGRect : (%f, %f) - (%f, %f)", rc.origin.x, rc.origin.y, rc.size.width, rc.size.height)
+#define HZLogCGPoint(pt)    HZLog(@"CGPoint : (%f, %f)", pt.x, pt.y)
+#define HZLogCGSize(sz)     HZLog(@"CGSize : (%f, %f)", sz.width, sz.height)
+
+#endif
 
 #endif

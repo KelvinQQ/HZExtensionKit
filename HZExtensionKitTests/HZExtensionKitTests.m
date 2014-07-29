@@ -35,6 +35,20 @@
     XCTAssertEqual(day, -1, @"Is Not True");
 }
 
+- (void)testLog
+{
+    HZLog(@"Hello World");
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+
+    
+    HZLog(@"%@", documentsDirectory);
+    
+    CGPoint pt = CGPointMake(111, 222);
+    HZLogCGPoint(pt);
+}
+
 
 
 @end
