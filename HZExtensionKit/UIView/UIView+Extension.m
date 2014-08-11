@@ -31,6 +31,54 @@
     return topVC.view;
 }
 
+#pragma mark -
+- (void)removeAllSubViews
+{
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
+@end
+
+@implementation UIView (Capture)
+
+#pragma mark -
+- (UIImage *)capture
+{
+    if(UIGraphicsBeginImageContextWithOptions != NULL) {
+        UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    }
+    else {
+        UIGraphicsBeginImageContext(self.size);
+    }
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:context];
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return theImage;
+}
+
+- (UIImage *)captureWithRect:(CGRect)rect
+{
+    if(UIGraphicsBeginImageContextWithOptions != NULL) {
+        UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    }
+    else {
+        UIGraphicsBeginImageContext(self.size);
+    }
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    UIRectClip(rect);
+    [self.layer renderInContext:context];
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return  theImage;
+}
+
+@end
+
+@implementation UIView (Position)
+
 - (CGFloat)left
 {
     return CGRectGetMinX(self.frame);
@@ -137,43 +185,4 @@
     self.center = CGPointMake(self.centerX, centerY);
 }
 
-#pragma mark -
-- (UIImage *)capture
-{
-    if(UIGraphicsBeginImageContextWithOptions != NULL) {
-        UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
-    }
-    else {
-        UIGraphicsBeginImageContext(self.size);
-    }
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [self.layer renderInContext:context];
-    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return theImage;
-}
-
-- (UIImage *)captureWithRect:(CGRect)rect
-{
-    if(UIGraphicsBeginImageContextWithOptions != NULL) {
-        UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
-    }
-    else {
-        UIGraphicsBeginImageContext(self.size);
-    }
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSaveGState(context);
-    UIRectClip(rect);
-    [self.layer renderInContext:context];
-    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return  theImage;
-}
-
-#pragma mark -
-- (void)removeAllSubViews
-{
-    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-}
 @end

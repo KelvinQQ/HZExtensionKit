@@ -95,7 +95,7 @@ static inline NSRange NSRangeMake(NSUInteger location, NSUInteger length)
 
 #ifndef HZLog
 
-#define WriteToLogFile
+//#define WriteToLogFile
 
 #ifdef DEBUG
 

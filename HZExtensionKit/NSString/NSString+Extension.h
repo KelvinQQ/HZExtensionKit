@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (Extension)
+@interface NSString (UUID)
 + (NSString *)stringForUUID;
+@end
+
+@interface NSString (URLEncode)
+- (NSString *)stringByUTF8Encode;
+- (NSString *)stringByUTF8Decode;
 @end

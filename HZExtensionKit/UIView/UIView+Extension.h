@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Extension)
+@interface UIView (Position)
 
 @property (nonatomic, assign) CGFloat left;
 @property (nonatomic, assign) CGFloat top;
@@ -25,11 +25,19 @@
 
 @property (nonatomic, assign) CGPoint origin;
 
-- (UIViewController *)viewController;
-+ (UIView *)appTopView;
+@end
+
+@interface UIView (Capture)
 
 - (UIImage *)capture;
 - (UIImage *)captureWithRect:(CGRect)rect;
+
+@end
+
+@interface UIView (Extension)
+
+- (UIViewController *)viewController;
++ (UIView *)appTopView;
 
 - (void)removeAllSubViews;
 @end
