@@ -47,7 +47,16 @@
     
     CGPoint pt = CGPointMake(111, 222);
     HZLogCGPoint(pt);
+}
 
+- (void)testURLEncode
+{
+    NSString *testString = @" `~!@#$%^&*()_+-={}[]|\\:;\"'<,>.?/AZaz你好";
+    HZLog(@"%@", testString);
+    NSString *encodeString = [testString stringByUTF8Encode];
+    HZLog(@"%@", encodeString);
+    NSString *decodeString = [encodeString stringByUTF8Decode];
+    HZLog(@"%@", decodeString);
 }
 
 
