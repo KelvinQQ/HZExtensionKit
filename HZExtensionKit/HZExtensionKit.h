@@ -20,5 +20,6 @@
 #import "UIAlertView/UIAlertView+Extension.h"
 #import "NSFileManager/NSFileManager+Extension.h"
 #import "NSString/NSString+Extension.h"
-#import "UIImage+Extension.h"
-#import "NSDictionary+Extension.h"
+#import "UIImage/UIImage+Extension.h"
+#import "NSDictionary/NSDictionary+Extension.h"
+#import "NSAttributedString/NSAttributedString+Extension.h"
