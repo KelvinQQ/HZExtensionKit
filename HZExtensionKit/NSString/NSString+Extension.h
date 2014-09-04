@@ -16,3 +16,8 @@
 - (NSString *)stringByUTF8Encode;
 - (NSString *)stringByUTF8Decode;
 @end
+
+@interface NSString (Encryption)
+- (NSString *)md5;
+- (NSString*)sha1;
+@end

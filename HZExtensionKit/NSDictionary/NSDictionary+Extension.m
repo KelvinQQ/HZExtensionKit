@@ -14,9 +14,9 @@
 
 @implementation NSMutableDictionary (Extension)
 
-- (void)setObjectSafe:(id)anObject forKey:(id<NSCopying>)aKey
+- (void)setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey
 {
-    if (!anObject) {
+    if (!anObject || !aKey) {
         return;
     }
     [self setObject:anObject forKey:aKey];

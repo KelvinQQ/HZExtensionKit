@@ -35,6 +35,7 @@
 		032B4DA5198658CF00761FE1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 032B4D92198658CF00761FE1 /* UIView+Extension.m */; };
 		032B4DA6198658CF00761FE1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 032B4D92198658CF00761FE1 /* UIView+Extension.m */; };
 		03E6CE4419B85AA000115BB7 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6CE4319B85AA000115BB7 /* NSAttributedString+Extension.m */; };
+		03E6CE4819B85D0400115BB7 /* NSData+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6CE4719B85D0400115BB7 /* NSData+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		032B4D92198658CF00761FE1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		03E6CE4219B85AA000115BB7 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
 		03E6CE4319B85AA000115BB7 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
+		03E6CE4619B85D0400115BB7 /* NSData+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Extension.h"; sourceTree = "<group>"; };
+		03E6CE4719B85D0400115BB7 /* NSData+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				032B4D74198658CF00761FE1 /* HZExtensionKit.h */,
+				03E6CE4519B85CF500115BB7 /* NSData */,
 				03E6CE4119B85AA000115BB7 /* NSAttributedString */,
 				032B4D75198658CF00761FE1 /* NSDate */,
 				032B4D78198658CF00761FE1 /* NSDictionary */,
@@ -283,6 +287,15 @@
 			path = NSAttributedString;
 			sourceTree = "<group>";
 		};
+		03E6CE4519B85CF500115BB7 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				03E6CE4619B85D0400115BB7 /* NSData+Extension.h */,
+				03E6CE4719B85D0400115BB7 /* NSData+Extension.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +379,7 @@
 			files = (
 				032B4DA5198658CF00761FE1 /* UIView+Extension.m in Sources */,
 				032B4D95198658CF00761FE1 /* NSDictionary+Extension.m in Sources */,
+				03E6CE4819B85D0400115BB7 /* NSData+Extension.m in Sources */,
 				032B4D9D198658CF00761FE1 /* UIAlertView+Extension.m in Sources */,
 				032B4D9F198658CF00761FE1 /* UIButton+Extension.m in Sources */,
 				032B4DA1198658CF00761FE1 /* UIColor+Extension.m in Sources */,
