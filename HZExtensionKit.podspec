@@ -17,47 +17,47 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.subspec 'NSAttributedString' do |ss|
-      ss.source_files = 'NSAttributedString/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/NSAttributedString/*.{h,m}'
   end
 
   s.subspec 'NSData' do |ss|
-      ss.source_files = 'NSData/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/NSData/*.{h,m}'
   end
 
   s.subspec 'NSDictionary' do |ss|
-      ss.source_files = 'NSDictionary/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/NSDictionary/*.{h,m}'
   end
 
   s.subspec 'NSFileManager' do |ss|
-      ss.source_files = 'NSFileManager/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/NSFileManager/*.{h,m}'
   end
 
   s.subspec 'NSString' do |ss|
-      ss.source_files = 'NSString/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/NSString/*.{h,m}'
   end
 
   s.subspec 'Public' do |ss|
-      ss.source_files = 'Public/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/Public/*.{h,m}'
   end
 
   s.subspec 'UIAlertView' do |ss|
-      ss.source_files = 'UIAlertView/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/UIAlertView/*.{h,m}'
   end
 
   s.subspec 'UIButton' do |ss|
-      ss.source_files = 'UIButton/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/UIButton/*.{h,m}'
   end
 
   s.subspec 'UIColor' do |ss|
-      ss.source_files = 'UIColor/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/UIColor/*.{h,m}'
   end
 
   s.subspec 'UIImage' do |ss|
-      ss.source_files = 'UIImage/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/UIImage/*.{h,m}'
   end
 
   s.subspec 'UIView' do |ss|
-      ss.source_files = 'UIView/*.{h,m}'
+      ss.source_files = 'HZExtensionKit/UIView/*.{h,m}'
   end
 
 end
