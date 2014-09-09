@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HZExtensionKit"
-  s.version      = "2.2.2"
+  s.version      = "2.2.3"
   s.summary      = "Useful Category"
   s.description  = <<-DESC
                   Category For UIColor, UIButton, UIAlertView, UIView, NSDate, NSFileManager, NSDictionary, NSString, UIImage.
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "History" => "history_zq@126.com" }
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/HistoryZhang/HZExtensionKit.git", :tag => "2.2.2" }
+  s.source       = { :git => "https://github.com/HistoryZhang/HZExtensionKit.git", :tag => "2.2.3" }
   s.source_files  = "HZExtensionKit/*.{h,m}"
   s.requires_arc = true
 
