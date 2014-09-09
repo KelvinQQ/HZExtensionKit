@@ -78,7 +78,7 @@
 #define HZLoadNib(nibName)      [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
 #endif
 
-#ifdef HZClearColor
+#ifndef HZClearColor
 #define HZClearColor            [UIColor clearColor]
 #endif
 
