@@ -24,4 +24,11 @@
         return img;
     }
 }
+
+- (UIImage *)clipImageWithRect:(CGRect)rect
+{
+    CGImageRef imageRefOut = CGImageCreateWithImageInRect(self.CGImage, rect);
+    UIImage *returnImage = [[UIImage alloc] initWithCGImage:imageRefOut];
+    return returnImage;
+}
 @end
