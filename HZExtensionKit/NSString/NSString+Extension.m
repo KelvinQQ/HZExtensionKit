@@ -52,7 +52,7 @@
 {
     const char *cStr = [self UTF8String];
     unsigned char result[16];
-    CC_MD5(cStr, strlen(cStr), result);
+    CC_MD5(cStr, (CC_LONG)strlen(cStr), result);
     return [NSString stringWithFormat:
             @"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
             result[0], result[1], result[2], result[3],
@@ -62,14 +62,14 @@
             ];
 }
 
-- (NSString*)sha1
+- (NSString *)sha1
 {
     const char *cstr = [self UTF8String];
     NSData *data = [NSData dataWithBytes:cstr length:self.length];
     
     uint8_t digest[CC_SHA1_DIGEST_LENGTH];
     
-    CC_SHA1(data.bytes, data.length, digest);
+    CC_SHA1(data.bytes, (CC_LONG)data.length, digest);
     
     NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
     
