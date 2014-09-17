@@ -7,7 +7,6 @@
 //
 
 #import "NSDate+Extension.h"
-#import "PublicDefines.h"
 
 static const int kMonthDays[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
@@ -155,7 +154,6 @@ static const int kMonthDays[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = format;
     NSString *string = [formatter stringFromDate:self];
-    HZ_REHZEAR(format);
     return string;
 }
 
