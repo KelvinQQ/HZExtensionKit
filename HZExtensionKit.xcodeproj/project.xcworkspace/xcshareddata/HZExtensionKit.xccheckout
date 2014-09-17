@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>91639657-9470-45B2-863F-6965F4A8918D</string>
+	<string>2B3D35BE-275A-4606-8BA4-E5F34F97451B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HZExtensionKit</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>605D03B9-9E0E-41BF-B95E-DD8B63FE51E4</key>
-		<string>https://github.com/HistoryZhang/HZExtensionKit.git</string>
+		<key>6B4AD5D3-6194-4D75-B32C-CA8F12241937</key>
+		<string>https://github.com/HistoryZhang/HZExtension.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>HZExtensionKit.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>605D03B9-9E0E-41BF-B95E-DD8B63FE51E4</key>
+		<key>6B4AD5D3-6194-4D75-B32C-CA8F12241937</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/HistoryZhang/HZExtensionKit.git</string>
+	<string>https://github.com/HistoryZhang/HZExtension.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>605D03B9-9E0E-41BF-B95E-DD8B63FE51E4</string>
+	<string>6B4AD5D3-6194-4D75-B32C-CA8F12241937</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>605D03B9-9E0E-41BF-B95E-DD8B63FE51E4</string>
+			<string>6B4AD5D3-6194-4D75-B32C-CA8F12241937</string>
 			<key>IDESourceControlWCCName</key>
-			<string>HZExtensionKit</string>
+			<string>HZExtension</string>
 		</dict>
 	</array>
 </dict>
