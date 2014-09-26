@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 History. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSString (UUID)
 + (NSString *)stringForUUID;
@@ -20,4 +20,8 @@
 @interface NSString (Encryption)
 - (NSString *)md5;
 - (NSString*)sha1;
+@end
+
+@interface NSString (URLQuery)
+- (NSDictionary *)queryDictionary;
 @end

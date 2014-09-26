@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030A8DEA19D5900700D0374D /* NSURL+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 030A8DE919D5900700D0374D /* NSURL+Extension.m */; };
 		032B4D23198657B100761FE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032B4D22198657B100761FE1 /* Foundation.framework */; };
 		032B4D31198657B100761FE1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032B4D30198657B100761FE1 /* XCTest.framework */; };
 		032B4D32198657B100761FE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 032B4D22198657B100761FE1 /* Foundation.framework */; };
@@ -61,6 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		030A8DE819D5900700D0374D /* NSURL+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Extension.h"; sourceTree = "<group>"; };
+		030A8DE919D5900700D0374D /* NSURL+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Extension.m"; sourceTree = "<group>"; };
 		032B4D1F198657B100761FE1 /* libHZExtensionKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHZExtensionKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		032B4D22198657B100761FE1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		032B4D2F198657B100761FE1 /* HZExtensionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZExtensionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030A8DE719D58F6400D0374D /* NSURL */ = {
+			isa = PBXGroup;
+			children = (
+				030A8DE819D5900700D0374D /* NSURL+Extension.h */,
+				030A8DE919D5900700D0374D /* NSURL+Extension.m */,
+			);
+			path = NSURL;
+			sourceTree = "<group>";
+		};
 		032B4D16198657B100761FE1 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				032B4D74198658CF00761FE1 /* HZExtensionKit.h */,
+				030A8DE719D58F6400D0374D /* NSURL */,
 				03E6CE4519B85CF500115BB7 /* NSData */,
 				03E6CE4119B85AA000115BB7 /* NSAttributedString */,
 				032B4D75198658CF00761FE1 /* NSDate */,
@@ -385,6 +398,7 @@
 				032B4DA1198658CF00761FE1 /* UIColor+Extension.m in Sources */,
 				032B4D97198658CF00761FE1 /* NSFileManager+Extension.m in Sources */,
 				032B4D9B198658CF00761FE1 /* PublicDefines.m in Sources */,
+				030A8DEA19D5900700D0374D /* NSURL+Extension.m in Sources */,
 				032B4DA3198658CF00761FE1 /* UIImage+Extension.m in Sources */,
 				032B4D93198658CF00761FE1 /* NSDate+Extension.m in Sources */,
 				032B4D99198658CF00761FE1 /* NSString+Extension.m in Sources */,

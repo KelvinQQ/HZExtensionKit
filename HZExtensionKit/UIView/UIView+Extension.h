@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 History. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIView (Position)
 

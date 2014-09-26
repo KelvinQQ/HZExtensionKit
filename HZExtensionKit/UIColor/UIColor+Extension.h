@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 History. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface UIColor (Extension)
 + (UIColor *)colorWith255Red:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
@@ -14,4 +14,5 @@
 + (UIColor *)colorWithHexRGB:(u_int32_t)rgb;
 + (UIColor *)colorWithHexRGB:(u_int32_t)rgb alpha:(CGFloat)alpha;
 + (UIColor *)colorWithHexString:(NSString *)rgb;
++ (UIColor *)randomColor;
 @end

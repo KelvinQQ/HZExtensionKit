@@ -81,3 +81,25 @@
 }
 
 @end
+
+@implementation NSString (URLQuery)
+
+- (NSDictionary *)queryDictionary
+{
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    NSArray *components = [self componentsSeparatedByString:@"&"];
+    for (NSString *keyValueString in components) {
+        NSArray *keyValueArray = [keyValueString componentsSeparatedByString:@"="];
+        if (2 == keyValueArray.count) {
+            [dictionary setObject:keyValueArray[1] forKey:keyValueArray[0]];
+        }
+    }
+    if (dictionary.count) {
+        return dictionary;
+    }
+    else {
+        return nil;
+    }
+}
+
+@end

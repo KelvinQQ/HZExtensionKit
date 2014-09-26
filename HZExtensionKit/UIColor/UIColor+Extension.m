@@ -45,4 +45,12 @@
     [scanner scanHexInt:&rgbValue];
     return [UIColor colorWithHexRGB:rgbValue];
 }
+
++ (UIColor *)randomColor
+{
+    CGFloat red = arc4random() % 256;
+    CGFloat green = arc4random() % 256;
+    CGFloat blue = arc4random() % 256;
+    return [UIColor colorWith255Red:red green:green blue:blue];
+}
 @end
