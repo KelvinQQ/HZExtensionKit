@@ -2,18 +2,22 @@
 Pod::Spec.new do |s|
 
   s.name         = "HZExtensionKit"
-  s.version      = "2.3.1"
+  s.version      = "2.3.2"
   s.summary      = "Useful Category"
   s.homepage     = "http://github.com/HistoryZhang/HZExtensionKit"
   s.license      = "MIT"
   s.author       = { "History" => "history_zq@126.com" }
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/HistoryZhang/HZExtensionKit.git", :tag => "2.3.1" }
+  s.source       = { :git => "https://github.com/HistoryZhang/HZExtensionKit.git", :tag => "2.3.2" }
   s.source_files  = "HZExtensionKit/*.{h,m}"
   s.requires_arc = true
 
   s.subspec 'NSAttributedString' do |ss|
       ss.source_files = 'HZExtensionKit/NSAttributedString/*.{h,m}'
+  end
+
+  s.subspec 'NSArray' do |ss|
+      ss.source_files = 'HZExtensionKit/NSArray/*.{h,m}'
   end
 
   s.subspec 'NSURL' do |ss|

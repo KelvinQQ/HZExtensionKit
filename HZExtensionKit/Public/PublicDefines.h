@@ -42,6 +42,10 @@
 #define HZStringFromInt(intValue)           [NSString stringWithFormat:@"%i", intValue]
 #endif
 
+#ifndef HZStringFromInteger
+#define HZStringFromInteger(integerValue)   [NSString stringWithFormat:@"%li", intValue]
+#endif
+
 #ifndef HZStringFromFloat
 #define HZStringFromFloat(floatValue)       [NSString stringWithFormat:@"%f", floatValue]
 #endif

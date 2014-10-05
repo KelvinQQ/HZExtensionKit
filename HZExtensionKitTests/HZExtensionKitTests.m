@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "HZExtensionKit.h"
+#import "NSArray+Extension.h"
 
 @interface HZExtensionKitTests : XCTestCase
 
@@ -47,6 +48,9 @@
     
     CGPoint pt = CGPointMake(111, 222);
     HZLogCGPoint(pt);
+    
+    NSInteger i = 4;
+    HZStringFromInt(i);
 }
 
 - (void)testURLEncode
@@ -59,6 +63,17 @@
     HZLog(@"%@", decodeString);
 }
 
-
+- (void)testArray
+{
+    NSArray *array = @[@"1", @"2", @"3"];
+    array = [array moveObjectAtIndex:2 toIndex:0];
+    
+//    id originObj = array[2];
+//    NSMutableArray *mutableArray = [array mutableCopy];
+//    [mutableArray removeObjectAtIndex:2];
+//    [mutableArray insertObject:originObj atIndex:0];
+    
+    HZLog(@"%@", array);
+}
 
 @end

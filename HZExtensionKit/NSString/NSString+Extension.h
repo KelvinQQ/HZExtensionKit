@@ -25,3 +25,7 @@
 @interface NSString (URLQuery)
 - (NSDictionary *)queryDictionary;
 @end
+
+@interface NSString (HTMLReplace)
+- (NSString *)replaceHTMLEntities;
+@end

@@ -103,3 +103,18 @@
 }
 
 @end
+
+@implementation NSString (HTMLReplace)
+
+- (NSString *)replaceHTMLEntities
+{
+    NSString *sourceString = self;
+    sourceString = [sourceString stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@" "];
+    sourceString = [sourceString stringByReplacingOccurrencesOfString:@"&quot;" withString:@"\""];
+    sourceString = [sourceString stringByReplacingOccurrencesOfString:@"&lt;" withString:@"<"];
+    sourceString = [sourceString stringByReplacingOccurrencesOfString:@"&gt;" withString:@">"];
+    sourceString = [sourceString stringByReplacingOccurrencesOfString:@"&#160;" withString:@" "];
+    return sourceString;
+}
+
+@end
