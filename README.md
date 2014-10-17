@@ -3,7 +3,7 @@ HZExtension
 
 Category For `UIColor`, `UIButton`, `UIAlertView`, `UIView`, `NSDate`, `NSFileManager`, `NSDictionary`, `NSString`, `UIImage`, `NSData`, `NSAttributedString`, `NSURL`, `NSArray`.
 
-Some Common Macro.
+Some Common Macro and Helper Class.
 
 ###How To Use
 1. Use `git clone https://github.com/HistoryZhang/HZExtension.git` or download the zip.

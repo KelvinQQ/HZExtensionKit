@@ -36,6 +36,7 @@
 		032B4DA5198658CF00761FE1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 032B4D92198658CF00761FE1 /* UIView+Extension.m */; };
 		032B4DA6198658CF00761FE1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 032B4D92198658CF00761FE1 /* UIView+Extension.m */; };
 		038227EE19DF91CC007F78BE /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 038227ED19DF91CC007F78BE /* NSArray+Extension.m */; };
+		03BA45A019F1364B00E776F2 /* HZHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BA459F19F1364B00E776F2 /* HZHelper.m */; };
 		03E6CE4419B85AA000115BB7 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6CE4319B85AA000115BB7 /* NSAttributedString+Extension.m */; };
 		03E6CE4819B85D0400115BB7 /* NSData+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E6CE4719B85D0400115BB7 /* NSData+Extension.m */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,8 @@
 		032B4D92198658CF00761FE1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		038227EC19DF91CC007F78BE /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
 		038227ED19DF91CC007F78BE /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
+		03BA459E19F1364B00E776F2 /* HZHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZHelper.h; sourceTree = "<group>"; };
+		03BA459F19F1364B00E776F2 /* HZHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZHelper.m; sourceTree = "<group>"; };
 		03E6CE4219B85AA000115BB7 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
 		03E6CE4319B85AA000115BB7 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
 		03E6CE4619B85D0400115BB7 /* NSData+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Extension.h"; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				032B4D74198658CF00761FE1 /* HZExtensionKit.h */,
+				03BA459D19F1363800E776F2 /* HZHelper */,
 				038227EB19DF91B7007F78BE /* NSArray */,
 				030A8DE719D58F6400D0374D /* NSURL */,
 				03E6CE4519B85CF500115BB7 /* NSData */,
@@ -304,6 +308,15 @@
 			path = NSArray;
 			sourceTree = "<group>";
 		};
+		03BA459D19F1363800E776F2 /* HZHelper */ = {
+			isa = PBXGroup;
+			children = (
+				03BA459E19F1364B00E776F2 /* HZHelper.h */,
+				03BA459F19F1364B00E776F2 /* HZHelper.m */,
+			);
+			path = HZHelper;
+			sourceTree = "<group>";
+		};
 		03E6CE4119B85AA000115BB7 /* NSAttributedString */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +425,7 @@
 				032B4DA1198658CF00761FE1 /* UIColor+Extension.m in Sources */,
 				032B4D97198658CF00761FE1 /* NSFileManager+Extension.m in Sources */,
 				032B4D9B198658CF00761FE1 /* PublicDefines.m in Sources */,
+				03BA45A019F1364B00E776F2 /* HZHelper.m in Sources */,
 				030A8DEA19D5900700D0374D /* NSURL+Extension.m in Sources */,
 				032B4DA3198658CF00761FE1 /* UIImage+Extension.m in Sources */,
 				032B4D93198658CF00761FE1 /* NSDate+Extension.m in Sources */,

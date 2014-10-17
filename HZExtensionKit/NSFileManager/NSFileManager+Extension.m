@@ -87,11 +87,13 @@
     if (![NSFileManager isFileExists:path]) {
         return ;
     }
-    NSEnumerator *childFilesEnumerator = [[[NSFileManager defaultManager] subpathsAtPath:path] objectEnumerator];
-    NSString* fileName;
-    while ((fileName = [childFilesEnumerator nextObject]) != nil){
-        NSString* fileAbsolutePath = [path stringByAppendingPathComponent:fileName];
-        [NSFileManager deleteAllFilesAtFloder:fileAbsolutePath];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:path error:NULL];
+    NSEnumerator *e = [contents objectEnumerator];
+    NSString *filename;
+    while ((filename = [e nextObject])) {
+        [fileManager removeItemAtPath:[path stringByAppendingPathComponent:filename] error:NULL];
     }
 }
+
 @end

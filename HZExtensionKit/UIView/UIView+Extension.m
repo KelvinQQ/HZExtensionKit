@@ -186,3 +186,19 @@
 }
 
 @end
+
+@implementation UIView (Layer)
+
+- (void)setLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color
+{
+    self.layer.borderColor = color.CGColor;
+    self.layer.borderWidth = width;
+}
+
+- (void)setLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color cornerRadius:(CGFloat)radius
+{
+    [self setLayerBorderWidth:width borderColor:color];
+    self.layer.cornerRadius = radius;
+}
+
+@end

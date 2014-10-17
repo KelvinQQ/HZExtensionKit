@@ -29,6 +29,7 @@
 {
     CGImageRef imageRefOut = CGImageCreateWithImageInRect(self.CGImage, rect);
     UIImage *returnImage = [[UIImage alloc] initWithCGImage:imageRefOut];
+    CGImageRelease(imageRefOut);
     return returnImage;
 }
 @end

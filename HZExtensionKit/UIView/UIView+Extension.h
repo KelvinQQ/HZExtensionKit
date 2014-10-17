@@ -41,3 +41,10 @@
 
 - (void)removeAllSubViews;
 @end
+
+@interface UIView (Layer)
+
+- (void)setLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color;
+- (void)setLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color cornerRadius:(CGFloat)radius;
+
+@end
