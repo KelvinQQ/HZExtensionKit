@@ -46,5 +46,5 @@
 
 - (void)setLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color;
 - (void)setLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color cornerRadius:(CGFloat)radius;
-
+- (void)setCircleLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color;
 @end

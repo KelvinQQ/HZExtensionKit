@@ -14,7 +14,7 @@
 		<string>https://github.com/HistoryZhang/HZExtension.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HZExtensionKit.xcodeproj/project.xcworkspace</string>
+	<string>HZExtensionKit.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>53DC229FB6196517D9B6AA8EC3D9FA3BCFAF6F18</key>
