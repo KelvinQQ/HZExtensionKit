@@ -13,5 +13,5 @@
 @end
 
 @interface NSMutableDictionary (Extension)
-- (void)setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey;
+- (BOOL)setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey;
 @end

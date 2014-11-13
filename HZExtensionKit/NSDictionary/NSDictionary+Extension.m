@@ -14,12 +14,13 @@
 
 @implementation NSMutableDictionary (Extension)
 
-- (void)setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey
+- (BOOL)setObjectSafely:(id)anObject forKey:(id<NSCopying>)aKey
 {
     if (!anObject || !aKey) {
-        return;
+        return NO;
     }
     [self setObject:anObject forKey:aKey];
+    return YES;
 }
 
 @end

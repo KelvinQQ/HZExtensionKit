@@ -14,4 +14,5 @@
 
 @interface NSMutableArray (Extension)
 - (void)moveObjectAtIndex:(NSInteger)index toIndex:(NSInteger)toIndex;
+- (BOOL)addObjectSafely:(id)anObject;
 @end

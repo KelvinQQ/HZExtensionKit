@@ -35,4 +35,14 @@
     [self insertObject:originObj atIndex:toIndex];
 }
 
+- (BOOL)addObjectSafely:(id)anObject
+{
+    if (anObject) {
+        [self addObject:anObject];
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
 @end
