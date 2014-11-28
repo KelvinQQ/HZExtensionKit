@@ -10,4 +10,7 @@
 
 @interface NSURL (QueryDictionary)
 - (NSDictionary *)queryDictionary;
+- (NSString *)queryValueWithKey:(NSString *)key;
+- (BOOL)checkHostWithString:(NSString *)host;
+- (BOOL)checkSchemeWithString:(NSString *)scheme;
 @end

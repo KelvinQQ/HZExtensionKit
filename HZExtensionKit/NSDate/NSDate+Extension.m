@@ -213,4 +213,21 @@ static const int kMonthDays[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
     NSDateComponents *comps = [gregorian components:unitFlags fromDate:date  toDate:self  options:0];
     return comps;
 }
+
+- (NSString *)dateHelperString
+{
+    NSDate *currentDate = [NSDate date];
+    NSTimeInterval interval = [currentDate timeIntervalSinceDate:self];
+    CGFloat hours = interval / (60.f * 60);
+    if (hours <= 1.f) {
+        return @"最新";
+    }
+    else if (hours > 1 && hours <= 24) {
+        NSInteger iHours = (NSInteger)hours;
+        return [NSString stringWithFormat:@"%@小时前", @(iHours)];
+    }
+    else {
+        return [self stringWithFormat:@"MM-dd"];
+    }
+}
 @end

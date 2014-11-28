@@ -27,4 +27,29 @@
         return nil;
     }
 }
+
+- (NSString *)queryValueWithKey:(NSString *)key
+{
+    return [self queryDictionary][key];
+}
+
+- (BOOL)checkHostWithString:(NSString *)host
+{
+    if ([self.host isEqualToString:host]) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
+
+- (BOOL)checkSchemeWithString:(NSString *)scheme
+{
+    if ([self.scheme isEqualToString:scheme]) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+}
 @end

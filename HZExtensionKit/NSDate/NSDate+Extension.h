@@ -7,6 +7,7 @@
 //
 
 @import Foundation;
+@import UIKit;
 
 @interface NSDate (Extension)
 @property (nonatomic, assign, readonly) NSInteger year;
@@ -31,4 +32,6 @@
 - (BOOL)isSameMonth:(NSDate *)date;
 + (NSDate *)dateWithString:(NSString *)string byFormat:(NSString *)format;
 - (NSDateComponents *)intervalDateComponentsWithDate:(NSDate *)date;
+
+- (NSString *)dateHelperString;
 @end
