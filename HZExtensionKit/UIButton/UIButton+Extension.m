@@ -43,4 +43,9 @@
 {
     return [self titleForState:UIControlStateNormal];
 }
+
+- (void)addTouchUpInsideAction:(SEL)action target:(id)target
+{
+    [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
 @end

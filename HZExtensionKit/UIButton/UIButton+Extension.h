@@ -14,4 +14,5 @@
 - (void)setNormalTitle:(NSString *)normal highlightedTitle:(NSString *)highlighted;
 - (void)setNormalTitle:(NSString *)normal;
 - (NSString *)normalTitle;
+- (void)addTouchUpInsideAction:(SEL)action target:(id)target;
 @end
