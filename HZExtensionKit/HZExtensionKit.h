@@ -27,3 +27,4 @@
 #import "NSURL+Extension.h"
 #import "NSArray+Extension.h"
 #import "HZHelper.h"
+#import "HZPreference.h"
