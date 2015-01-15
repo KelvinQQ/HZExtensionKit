@@ -118,3 +118,46 @@
 }
 
 @end
+
+@implementation NSString (Spell)
+
+- (NSString *)spelling
+{
+    return [self spellingWithSpace:NO];
+}
+
+- (NSString *)spellingWithSpace:(BOOL)space
+{
+    if (self.length) {
+        NSMutableString *copy = [self mutableCopy];
+        CFStringTransform((__bridge CFMutableStringRef)copy, NULL, kCFStringTransformMandarinLatin, NO);
+        CFStringTransform((__bridge CFMutableStringRef)copy, NULL, kCFStringTransformStripDiacritics, NO);
+        if (!space) {
+            [copy replaceOccurrencesOfString:@" " withString:@"" options:NSCaseInsensitiveSearch range:NSMakeRange(0, copy.length)];
+        }
+        return copy;
+    }
+    else {
+        return nil;
+    }
+}
+
+- (NSString *)spellingInitial
+{
+    if (self.length) {
+        NSMutableString *copy = [self mutableCopy];
+        CFStringTransform((__bridge CFMutableStringRef)copy, NULL, kCFStringTransformMandarinLatin, NO);
+        CFStringTransform((__bridge CFMutableStringRef)copy, NULL, kCFStringTransformStripDiacritics, NO);
+        NSArray *array = [copy componentsSeparatedByString:@" "];
+        NSMutableString *initial = [NSMutableString string];
+        for (NSString *subSpelling in array) {
+            [initial appendString:[subSpelling substringToIndex:1]];
+        }
+        return initial;
+    }
+    else {
+        return nil;
+    }
+}
+
+@end
