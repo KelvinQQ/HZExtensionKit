@@ -20,6 +20,7 @@
 @interface NSString (Encryption)
 - (NSString *)md5;
 - (NSString*)sha1;
+- (NSString *)BASE64_HMAC_SHA1EncryptWithPrivateKey:(NSString *)key;
 @end
 
 @interface NSString (URLQuery)

@@ -209,7 +209,7 @@
 
 - (void)setCircleLayerBorderWidth:(CGFloat)width borderColor:(UIColor *)color
 {
-    CGFloat radius = MAX(self.width, self.height);
+    CGFloat radius = MAX(self.width, self.height) / 2;
     [self setCircleLayerBorderWidth:width borderColor:color cornerRadius:radius];
 }
 @end

@@ -32,4 +32,14 @@
     CGImageRelease(imageRefOut);
     return returnImage;
 }
+
+- (UIImage *)changeImageToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+    CGRect imageRect = CGRectMake(0.0, 0.0, size.width, size.height);
+    [self drawInRect:imageRect];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
 @end

@@ -8,6 +8,7 @@
 
 #import "NSString+Extension.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonHMAC.h>
 
 @implementation NSString (UUID)
 + (NSString *)stringForUUID
@@ -78,6 +79,23 @@
     }
     return output;
     
+}
+
+- (NSString *)BASE64_HMAC_SHA1EncryptWithPrivateKey:(NSString *)key
+{
+    NSData* privateData = [key dataUsingEncoding:NSUTF8StringEncoding];
+    NSData* publicData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    
+    const void* privateBytes = [privateData bytes];
+    const void* publicBytes = [publicData bytes];
+    
+    void* outs = malloc(CC_SHA1_DIGEST_LENGTH);
+    
+    CCHmac(kCCHmacAlgSHA1, privateBytes, [privateData length], publicBytes, [publicData length], outs);
+    
+    NSData* signatureData = [NSData dataWithBytesNoCopy:outs length:CC_SHA1_DIGEST_LENGTH freeWhenDone:YES];
+    NSString *string = [signatureData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return string;
 }
 
 @end
