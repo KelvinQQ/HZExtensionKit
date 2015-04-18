@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HZExtensionKit"
-  s.version      = "2.4.8"
+  s.version      = "2.5"
   s.summary      = "Useful Category"
   s.homepage     = "http://github.com/HistoryZhang/HZExtensionKit"
   s.license      = "MIT"
