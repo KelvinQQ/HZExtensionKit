@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "HistoryZhang" => "history_zq@foxmail.com" }
   s.platform     = :ios, "6.0"
-  s.source       = { :git => "https://github.com/HistoryZhang/HZExtensionKit.git", :tag => "2.4.8" }
+  s.source       = { :git => "https://github.com/HistoryZhang/HZExtensionKit.git", :tag => "2.5" }
   s.source_files  = "HZExtensionKit/*.{h,m}"
   s.requires_arc = true
 
