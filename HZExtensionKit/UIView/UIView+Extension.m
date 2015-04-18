@@ -44,12 +44,7 @@
 #pragma mark -
 - (UIImage *)capture
 {
-    if(UIGraphicsBeginImageContextWithOptions != NULL) {
-        UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
-    }
-    else {
-        UIGraphicsBeginImageContext(self.size);
-    }
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [self.layer renderInContext:context];
     UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -60,12 +55,7 @@
 
 - (UIImage *)captureWithRect:(CGRect)rect
 {
-    if(UIGraphicsBeginImageContextWithOptions != NULL) {
-        UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
-    }
-    else {
-        UIGraphicsBeginImageContext(self.size);
-    }
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
     UIRectClip(rect);
