@@ -9,7 +9,7 @@
 #import "UIView+Extension.h"
 
 @implementation UIView (Extension)
-- (UIViewController *)viewController
+- (UIViewController *)viewController __attribute__((deprecated("Use HZViewJumpProtocol")))
 {
     UIResponder *responder = [self nextResponder];
     while (responder) {
@@ -21,7 +21,7 @@
     return nil;
 }
 
-+ (UIView *)appTopView
++ (UIView *)appTopView __attribute__((deprecated("Use self.window")))
 {
     UIViewController *appRootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
     UIViewController *topVC = appRootVC;

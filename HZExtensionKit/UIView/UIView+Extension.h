@@ -36,8 +36,8 @@
 
 @interface UIView (Extension)
 
-- (UIViewController *)viewController;
-+ (UIView *)appTopView;
+- (UIViewController *)viewController __attribute__((deprecated("Use HZViewJumpProtocol")));
++ (UIView *)appTopView __attribute__((deprecated("Use self.window")));
 
 - (void)removeAllSubViews;
 @end
